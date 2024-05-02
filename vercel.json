@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "app/api/tests/route.ts": {
+      "memory": 3008,
+      "maxDuration": 300
+    },
+    "app/api/tests/autoGrade/route.ts": {
+      "memory": 3008,
+      "maxDuration": 300
+    },
+    "app/api/tests/suggestTest/route.ts": {
+      "memory": 3008,
+      "maxDuration": 300
+    }
+  }
+}

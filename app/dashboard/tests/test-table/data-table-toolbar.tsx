@@ -1,0 +1,100 @@
+"use client"
+
+import { Cross2Icon, LockClosedIcon, LockOpen1Icon } from "@radix-ui/react-icons"
+import { Table } from "@tanstack/react-table"
+
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { DataTableViewOptions } from "./data-table-view-options"
+
+import {
+  ArrowDownIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+  CheckCircledIcon,
+  CircleIcon,
+  CrossCircledIcon,
+  QuestionMarkCircledIcon,
+  StopwatchIcon,
+} from "@radix-ui/react-icons"
+
+export const statuses = [
+  {
+    value: "open",
+    label: "Open",
+    icon: LockOpen1Icon,
+  },
+  {
+    value: "closed",
+    label: "Locked",
+    icon: LockClosedIcon,
+  },
+]
+
+import { DataTableFacetedFilter } from "./data-table-faceted-filter"
+import { useState } from "react"
+import { RefreshCcwDotIcon } from "lucide-react"
+
+interface DataTableToolbarProps<TData> {
+  table: Table<TData>
+  getTests: () => void
+  loadingTests: boolean
+}
+
+export function DataTableToolbar<TData>({
+  table,
+  getTests,
+  loadingTests
+}: DataTableToolbarProps<TData>) {
+
+  const [filterValue, setFilterValue] = useState<string>('');
+  const isFiltered = table.getState().globalFilter !== undefined;
+
+  const onFilterChange = (value: string) => {
+    setFilterValue(value);
+    // Set a global filter instead of a column filter.
+    // Note that you might need to adjust the implementation based on your global filtering logic.
+    table.setGlobalFilter(value);
+  };
+
+  return (
+    <div className="flex items-center justify-between">
+      <div className="flex flex-1 items-center space-x-2">
+        <Input
+          placeholder="Search..."
+          value={filterValue}
+          onChange={(event) => onFilterChange(event.target.value)}
+          className="h-8 w-[150px] lg:w-[250px]"
+        />
+        {table.getColumn("status") && (
+          <DataTableFacetedFilter
+            column={table.getColumn("status")}
+            title="Status"
+            options={statuses}
+          />
+        )}
+        {isFiltered && (
+          <Button
+            variant="ghost"
+            onClick={() => table.resetColumnFilters()}
+            className="h-8 px-2 lg:px-3"
+          >
+            Reset
+            <Cross2Icon className="ml-2 h-4 w-4" />
+          </Button>
+        )}
+      </div>
+      <Button
+        variant="outline"
+        size="sm"
+        className="mr-2 hidden h-8 lg:flex"
+        onClick={() => getTests()}
+        disabled={!!loadingTests}
+      >
+        <RefreshCcwDotIcon className={`mr-2 h-4 w-4 ${loadingTests ? 'animate-spin' : ''}`} />
+        Refresh
+      </Button>
+      <DataTableViewOptions table={table} />
+    </div>
+  )
+}
