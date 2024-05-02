@@ -38,7 +38,7 @@ Average rating: 7.80/10, indicating generally accurate and relevant questions.
 Average rating: 7.74/10, showing varied opinions on auto-grading accuracy and AI feedback helpfulness.
 
 ### AI-Generated "Hints" Feature Accuracy Sentiment
-![AI-Generated "Hints" Feature Accuracy Sentiment](/public/AI_Hints_Feature_Ratings.png)
+![AI-Generated "Hints" Feature Accuracy Sentiment](/public/Hints_Feature_Ratings.png)
 
 Average rating: 7.60/10, suggesting generally positive sentiment toward the "hints" feature.
 
