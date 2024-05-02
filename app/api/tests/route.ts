@@ -18,7 +18,6 @@ export async function POST(request: NextRequest) {
     },
   });
   if (!user) return NextResponse.json({ status: 400, message: "No user found" });
-  if (user.subscriptionStatus != "active" && user.generations >= 3) return NextResponse.json({ status: 400, message: "Test generation limit reached" });
 
   const {
     owner,
