@@ -51,27 +51,41 @@ Average rating: 8.16/10, demonstrating broadly positive opinions on the platform
 
 This project is built with [Next.js](https://nextjs.org/) and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-1. Create a vercel project and set up the  postgres & blob databases in the storage dashboard.
+1. Clone the repo:
 
-2. Create a nextauth secret with:
+  ```bash
+  git clone https://github.com/JackYouk/testquick.git
+  ```
+
+2. Install required packages:
+
+  ```bash
+  npm install
+  ```
+
+3. Create a vercel project and set up the  postgres & blob databases in the storage dashboard.
+
+4. Create a nextauth secret with:
+
   ```bash
   openssl rand -base64 32
   ```
 
-3. Add the required API keys to your `.env` file. See .env.example for an example of the required keys.
+5. Add the required API keys to your `.env` file. See .env.example for an example of the required keys.
 
-4. Migrate the prisma schema to your postgres database with:
+6. Migrate the prisma schema to your postgres database with:
+
   ```bash
    npx prisma migrate dev
    ```
 
-5. Run the development server:
+7. Run the development server:
 
    ```bash
    npm run dev
    ```
 
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+8. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 For more information about Next.js and deployment options, refer to the [Next.js Documentation](https://nextjs.org/docs).
 
