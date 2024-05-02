@@ -28,19 +28,19 @@ TestQuick was tested with 43 students in Laney College's CIS27 class. The experi
 ## Data Analysis
 
 ### AI-Generated Question Accuracy Sentiment
-![AI-Generated Question Accuracy Sentiment](Question_Accuracy_Ratings.png)
+![AI-Generated Question Accuracy Sentiment](/public/Question_Accuracy_Ratings.png)
 Average rating: 7.80/10, indicating generally accurate and relevant questions.
 
 ### AI-Generated Grading & Feedback Accuracy Sentiment
-![AI-Generated Grading & Feedback Accuracy Sentiment](Auto-Grader_Ratings.png)
+![AI-Generated Grading & Feedback Accuracy Sentiment](/public/Auto-Grader_Ratings.png)
 Average rating: 7.74/10, showing varied opinions on auto-grading accuracy and AI feedback helpfulness.
 
 ### AI-Generated "Hints" Feature Accuracy Sentiment
-![AI-Generated "Hints" Feature Accuracy Sentiment](AI_Hints_Feature_Ratings.png)
+![AI-Generated "Hints" Feature Accuracy Sentiment](/public/AI_Hints_Feature_Ratings.png)
 Average rating: 7.60/10, suggesting generally positive sentiment toward the "hints" feature.
 
 ### Platform UI/UX Ratings
-![Platform UI/UX Ratings](Platform_UI_UX_Ratings.png)
+![Platform UI/UX Ratings](/public/Platform_UI_UX_Ratings.png)
 Average rating: 8.16/10, demonstrating broadly positive opinions on the platform's appearance, ease of use, intuitiveness, professionalism, and accessibility.
 
 ## Getting Started
