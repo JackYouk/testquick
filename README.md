@@ -67,8 +67,10 @@ This project is built with [Next.js](https://nextjs.org/) and bootstrapped with 
 
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+For more information about Next.js and deployment options, refer to the [Next.js Documentation](https://nextjs.org/docs).
+
 ## Future Implications
 
 TestQuick aims to expand into a full learning management system (LMS) and online classroom with an AI toolkit for teachers and an AI tutoring portal for students. The project will be open-sourced to promote transparency, collaboration, and further innovation from the community. Additionally, grant funding will be pursued to establish local GPU clusters and AI inference servers in Bay Area schools, enabling high-performance, low-latency AI assistance without reliance on cloud providers.
 
-For more information about Next.js and deployment options, refer to the [Next.js Documentation](https://nextjs.org/docs).
+**Thank you to everyone who participated in the TestQuick experiment, more information about the evolution of this software will be announced soon.**
