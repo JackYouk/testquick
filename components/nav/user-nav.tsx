@@ -76,10 +76,6 @@ export function UserNav() {
             Account
             {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push("/dashboard/settings/billing")}>
-            Billing
-            {/* <DropdownMenuShortcut>⌘B</DropdownMenuShortcut> */}
-          </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push("/dashboard/settings/preferences")}>
             Settings
             {/* <DropdownMenuShortcut>⌘S</DropdownMenuShortcut> */}
