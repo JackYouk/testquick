@@ -93,9 +93,9 @@ export function AiHintsHelper({ className, threadId, questions, responses }: AiH
             if (!response.ok) {
                 throw new Error("Failed to submit suggestion due to server error");
             }
-            const newSuggestedQuestions = await response.json();
+            const generatedHint = await response.json();
             setHintLoading(false);
-            setAiHint(newSuggestedQuestions.questions);
+            setAiHint(generatedHint.hint);
             setHintPrompt("");
         } catch (err) {
             console.error(err);
